@@ -42,4 +42,8 @@ public class GuideServiceImpl implements GuideService {
             throw new RuntimeException("Guide not found");
         }
     }
+    @Override
+    public List<Guide> getGuidesByAgencyId(int _agencyId) {
+        return _guideRepository.findByAgencyId(_agencyId);
+    }
 }

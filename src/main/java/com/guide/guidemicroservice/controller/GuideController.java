@@ -49,4 +49,13 @@ public class GuideController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    @GetMapping("/guides/by-agency/{agencyId}")
+    public ResponseEntity<List<Guide>> getGuidesByAgencyId(@PathVariable int agencyId) {
+        List<Guide> guides = _guideService.getGuidesByAgencyId(agencyId);
+        if (guides.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(guides, HttpStatus.OK);
+    }
+
 }

@@ -18,7 +18,7 @@ public class Guide {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
     @Column(name = "agency_id",nullable = false)
-    private int AgencyId;
+    private int agencyId;
     @Column(name = "name",nullable = false)
     private String Name;
     @Column(name = "specilization",nullable = false)
