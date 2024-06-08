@@ -11,36 +11,36 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/guide")
 public class GuideController {
     @Autowired
     private GuideService _guideService;
 
-    @PostMapping("/guide")
+    @PostMapping
     public ResponseEntity<Guide> createGuide(@RequestBody Guide _guide){
         Guide createdGuide = _guideService.createGuide(_guide);
         return new ResponseEntity<>(createdGuide, HttpStatus.CREATED);
     }
 
-    @GetMapping("/guide")
+    @GetMapping
     public ResponseEntity<List<Guide>> getAllGuide(){
         List<Guide> guides = _guideService.getAllGuide();
         return new ResponseEntity<>(guides, HttpStatus.OK);
     }
-    @PutMapping("/guide/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Void> updateGuide(@PathVariable("id") int id, @RequestBody Guide _guide){
         _guide.setId(id);
         _guideService.updateGuide(_guide);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @DeleteMapping("/guide/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteGuide(@PathVariable("id") int id){
         _guideService.deleteGuide(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping("/guide/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Guide> getGuideById(@PathVariable("id") int id){
         try {
             Guide guide = _guideService.getGuideById(id);
@@ -49,7 +49,7 @@ public class GuideController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-    @GetMapping("/guides/by-agency/{agencyId}")
+    @GetMapping("/by-agency/{agencyId}")
     public ResponseEntity<List<Guide>> getGuidesByAgencyId(@PathVariable int agencyId) {
         List<Guide> guides = _guideService.getGuidesByAgencyId(agencyId);
         if (guides.isEmpty()) {
