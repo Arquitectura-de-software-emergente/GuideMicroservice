@@ -1,7 +1,7 @@
-package com.guide.guidemicroservice.controller;
+package com.guide.guidemicroservice.api.controller;
 
-import com.guide.guidemicroservice.entities.Guide;
-import com.guide.guidemicroservice.service.GuideService;
+import com.guide.guidemicroservice.domain.model.Guide;
+import com.guide.guidemicroservice.domain.service.GuideService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
-package com.guide.guidemicroservice.repository;
+package com.guide.guidemicroservice.domain.persistence;
 
-import com.guide.guidemicroservice.entities.Guide;
+import com.guide.guidemicroservice.domain.model.Guide;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

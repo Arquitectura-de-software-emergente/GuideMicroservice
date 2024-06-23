@@ -1,4 +1,4 @@
-package com.guide.guidemicroservice.entities;
+package com.guide.guidemicroservice.domain.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

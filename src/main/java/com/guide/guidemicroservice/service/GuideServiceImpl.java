@@ -1,8 +1,8 @@
-package com.guide.guidemicroservice.service.impl;
+package com.guide.guidemicroservice.service;
 
-import com.guide.guidemicroservice.entities.Guide;
-import com.guide.guidemicroservice.repository.GuideRepository;
-import com.guide.guidemicroservice.service.GuideService;
+import com.guide.guidemicroservice.domain.model.Guide;
+import com.guide.guidemicroservice.domain.persistence.GuideRepository;
+import com.guide.guidemicroservice.domain.service.GuideService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

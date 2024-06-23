@@ -1,6 +1,6 @@
-package com.guide.guidemicroservice.service;
+package com.guide.guidemicroservice.domain.service;
 
-import com.guide.guidemicroservice.entities.Guide;
+import com.guide.guidemicroservice.domain.model.Guide;
 
 import java.util.List;
 
