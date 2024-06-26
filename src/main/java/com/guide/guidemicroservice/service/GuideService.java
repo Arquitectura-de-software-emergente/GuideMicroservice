@@ -10,4 +10,6 @@ public interface GuideService {
     public abstract void updateGuide(Guide _guide);
     public abstract void deleteGuide(int _id);
     public abstract Guide getGuideById(int _id);
+
+
 }

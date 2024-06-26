@@ -12,20 +12,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "guide")
+@Table(name = "post")
 public class Guide {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
-    @Column(name = "agency_id",nullable = false)
-    private int AgencyId;
-    @Column(name = "name",nullable = false)
-    private String Name;
-    @Column(name = "specilization",nullable = false)
-    private String Specilization;
-    @Column(name = "experience",nullable = false)
-    private String Experience;
-    @Column(name = "certifications",nullable = false)
-    private String Certifications;
+    @Column(name = "title",nullable = false)
+    private String Title;
+    @Column(name = "description",nullable = false)
+    private String Description;
+    @Column(name = "imageUrl",nullable = false)
+    private String imageUrl;
+    @Column(name = "autor",nullable = false)
+    private String Autor;
 
 }
